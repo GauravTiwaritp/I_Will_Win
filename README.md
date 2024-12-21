@@ -1,6 +1,7 @@
 # I_Will_Win
-## **Our project Database design **
+## Our project Database design 
 ![image](https://github.com/user-attachments/assets/d10fed1d-dbb3-4556-826c-62912520c4e2)
+---
 Made using Draw.io
 ## **Application Flow**
 
