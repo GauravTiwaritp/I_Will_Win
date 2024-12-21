@@ -19,6 +19,9 @@ require('dotenv').config();
 const { connectToDatabase } = require('./src/models/dbConnection');
 const errorHandler = require('./src/config/ApiErrorHandle');
 const { maskSensitiveData, filterHeaders } = require('./src/utils/filtering');
+
+const authRoutes = require('./src/routes/authRoutes');
+
 app.use((req, res, next) => {
   const startTime = Date.now();
   if (req.files) {
@@ -70,6 +73,8 @@ app.use((req, res, next) => {
   });
   next();
 });
+
+app.use('/api/v1/auth', authRoutes);
 
 app.use(errorHandler);
 
