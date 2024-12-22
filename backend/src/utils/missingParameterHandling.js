@@ -1,4 +1,4 @@
-const errorMessages = require('../config/errorMessage');
+const errorMessages = require('../config/errorMessages');
 const ApiError = require('./ApiError');
 const handleMissingParameter = (payload, requiredFields) => {
   const missingFields = requiredFields.filter((field) => !payload[field]);

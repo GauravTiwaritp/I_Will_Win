@@ -21,6 +21,7 @@ const errorHandler = require('./src/config/ApiErrorHandle');
 const { maskSensitiveData, filterHeaders } = require('./src/utils/filtering');
 
 const authRoutes = require('./src/routes/authRoutes');
+const stockRoutes = require('./src/routes/stockRoutes');
 
 app.use((req, res, next) => {
   const startTime = Date.now();
@@ -75,6 +76,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/stock', stockRoutes);
 
 app.use(errorHandler);
 

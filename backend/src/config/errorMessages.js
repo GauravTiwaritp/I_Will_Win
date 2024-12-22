@@ -26,4 +26,11 @@ const errorMessages = {
     message: 'Invalid password',
     errors: ['Invalid password'],
   },
+  STOCK_NOT_FOUND: {
+    statusCode: 404,
+    message: 'Stock not found',
+    errors: ['Stock not found'],
+  },
 };
+
+module.exports = errorMessages;
