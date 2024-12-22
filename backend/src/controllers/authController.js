@@ -5,7 +5,7 @@ const handleMissingParameter = require('../utils/missingParameterHandling');
 const Auth = require('../class/auth');
 const auth = new Auth();
 
-exports.register = async (req, res) => {
+exports.register = async (req, res, next) => {
   const { email, name, password } = req.body;
   try {
     handleMissingParameter(req.body, ['email', 'name', 'password']);
@@ -16,7 +16,7 @@ exports.register = async (req, res) => {
   }
 };
 
-exports.login = async (req, res) => {
+exports.login = async (req, res, next) => {
   const { email, password } = req.body;
   try {
     handleMissingParameter(req.body, ['email', 'password']);
